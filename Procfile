@@ -1,1 +1,1 @@
-web:    java -cp target/classes:target/dependency/* Herokuapp
+web: java -Dserver.port=$PORT -jar target/herokuapp-1.0-SNAPSHOT.jar
