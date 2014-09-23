@@ -25,7 +25,14 @@ public class TestController {
 	@RequestMapping("/")
 	@ResponseBody
 	public String helloWorld() {
-		return testService.hello();
+		StringBuffer sb=new StringBuffer();
+		sb.append("From Service: ");
+		sb.append(testService.hello());
+		sb.append("<br>");
+		sb.append("Available controller urls:");
+		sb.append("<a href= \"department\">Department</a><br>");
+		sb.append("<a href=\"employee\">Employee</a><br>");
+		return sb.toString();
 	}
 
 	@RequestMapping("/department")
