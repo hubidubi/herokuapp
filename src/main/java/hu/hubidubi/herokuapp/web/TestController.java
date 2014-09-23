@@ -29,7 +29,7 @@ public class TestController {
 		sb.append("From Service: ");
 		sb.append(testService.hello());
 		sb.append("<br>");
-		sb.append("Available controller urls:");
+		sb.append("Available controller urls:<br>");
 		sb.append("<a href= \"department\">Department</a><br>");
 		sb.append("<a href=\"employee\">Employee</a><br>");
 		return sb.toString();
