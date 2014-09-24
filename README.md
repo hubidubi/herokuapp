@@ -8,3 +8,4 @@ Tested features:
  * Database auto configuration
  * Liquibase changelog running at deploy time
  * Spring Data data access
+ * Gradle build
