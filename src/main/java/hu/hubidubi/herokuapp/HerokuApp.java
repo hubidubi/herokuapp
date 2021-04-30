@@ -1,6 +1,7 @@
 package hu.hubidubi.herokuapp;
 
-import org.apache.log4j.Logger;
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -10,12 +11,11 @@ import org.springframework.context.annotation.Configuration;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+@Slf4j
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
 public class HerokuApp {
-
-	Logger logger=Logger.getLogger(HerokuApp.class);
 
 	@Bean
 	protected ServletContextListener listener() {
@@ -23,18 +23,18 @@ public class HerokuApp {
 
 			@Override
 			public void contextInitialized(ServletContextEvent sce) {
-				logger.info("ServletContext initialized");
+				log.info("ServletContext initialized");
 			}
 
 			@Override
 			public void contextDestroyed(ServletContextEvent sce) {
-				logger.info("ServletContext destroyed");
+				log.info("ServletContext destroyed");
 			}
 
 		};
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		SpringApplication.run(HerokuApp.class, args);
 	}
 
