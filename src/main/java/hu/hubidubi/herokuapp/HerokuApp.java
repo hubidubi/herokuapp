@@ -1,6 +1,5 @@
 package hu.hubidubi.herokuapp;
 
-
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -37,5 +36,4 @@ public class HerokuApp {
 	public static void main(String[] args) {
 		SpringApplication.run(HerokuApp.class, args);
 	}
-
 }
